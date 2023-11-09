@@ -3,7 +3,6 @@ import numpy as np
 
 if __name__ == '__main__':
     originalImage = cv.imread("text.jpg", 0)
-    # cv.imshow("original image", originalImage)
 
     erosionKernel = np.ones((20, 150), np.uint8)
     erosionKernelForWords = np.ones((7, 14), np.uint8)
@@ -27,9 +26,7 @@ if __name__ == '__main__':
     print(f"Total Number of words are: {total_labels_words - 1}")
 
     cv.imshow("original Image", originalImage)
-    cv.imshow("Lines", lines)
     cv.imshow("Colored Lines", colored_lines)
-    cv.imshow("words", words)
     cv.imshow("Colored Words", colored_words)
 
     cv.waitKey(0)
